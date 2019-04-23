@@ -1,0 +1,109 @@
+<template>
+    <div class="bargain">
+        <!-- :data="tableData.filter(data => !search || data.name.toLowerCase().includes(search.toLowerCase()))" -->
+    <el-table
+    style="width: 100%">
+    <el-table-column
+      label="订单编号"																													
+      prop="date">						
+    </el-table-column>													
+    <el-table-column
+      label="申请人"
+      prop="name">
+    </el-table-column>
+     <el-table-column
+      label="所属上级"
+      prop="name">
+    </el-table-column>
+     <el-table-column
+      label="合约"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="数量（手）"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="买/卖"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="成交时间"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="成交价"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="总市值"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="占用信用金"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="平仓时间"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="平仓价"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="建仓手续费"
+      prop="name">
+    </el-table-column>
+      <el-table-column
+      label="平仓手续费"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="总手续费"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="结算价"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="平仓盈亏"
+      prop="name">		
+    </el-table-column>
+     <el-table-column
+      label="实际盈亏"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="平仓类型"
+      prop="name">
+    </el-table-column>
+     <el-table-column
+      label="止盈价"
+      prop="name">
+    </el-table-column>
+     <el-table-column
+      label="止损价"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+    label="操作"
+    >
+      <!-- <template slot-scope="scope">
+        <el-button
+          size="mini"
+          @click="handleEdit(scope.$index, scope.row)">查看</el-button>
+      </template> -->
+    </el-table-column>
+  </el-table>
+    </div>
+</template>
+<script>
+export default {
+   
+}
+</script>
+<style>
+
+</style>
