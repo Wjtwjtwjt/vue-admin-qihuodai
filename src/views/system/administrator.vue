@@ -5,13 +5,13 @@
       <el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
         <el-form :inline="true" @submit.native.prevent>
           <el-form-item>
-            <el-input v-model="tableData.name" placeholder="姓名"></el-input>
+            <el-input class="bn" v-model="tableData.name" placeholder="姓名"></el-input>
           </el-form-item>
-          <el-form-item>
+          <el-form-item class="bt">
             <el-button type="primary" v-on:click="getUsers">查询</el-button>
           </el-form-item>
           <el-form-item>
-            <el-select v-model="tableData.id" placeholder="用户组">
+            <el-select class="bn" v-model="tableData.id" placeholder="用户组">
             <el-option
               v-for="item in tableData"
               :key="item.id"
@@ -20,7 +20,7 @@
             ></el-option>
           </el-select>
           </el-form-item>
-          <el-form-item>
+          <el-form-item class="bt">
             <el-button type="primary" v-on:click="getUsers">筛选</el-button>
           </el-form-item>
           <el-form-item class="btn">
@@ -32,12 +32,12 @@
     <div class="administrator-b">
       <el-table ref="singleTable" :data="tableData" highlight-current-row style="width: 100%">
         <el-table-column label="编号"></el-table-column>
-        <el-table-column property="date" label="日期" ></el-table-column>
-        <el-table-column property="name" label="姓名" ></el-table-column>
-        <el-table-column property="address" label="地址"></el-table-column>
+        <el-table-column property="date" label="用户名" ></el-table-column>
+        <el-table-column property="name" label="用户组" ></el-table-column>
+        <el-table-column property="address" label="状态"></el-table-column>
         <el-table-column label="操作" width="200">
           <template slot-scope="scope">
-            <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+            <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
             <el-button size="mini" type="danger" @click="handleDel(scope.$index, scope.row)">删除</el-button>
           </template>
         </el-table-column>
@@ -262,30 +262,40 @@ export default {
   background-color: #fff;
   padding: 15px 15px 0;
   .administrator-t{
-    height: 80px;
-    line-height: 80px;
+    height: 60px;
+    line-height: 60px;
     background-color: rgb(230, 223, 223);
     position: relative;
     .toolbar{
       margin-left: 15px;
-      margin-top: 20px;
-      .el-input{
-        height: 20px;
-      }
-     .el-button--primary{
+      margin-top: 12px;
+      .el-button--primary{
       border:0;
-     }
-     .btn{
-       position: absolute;
-       right: 10px;
-     }
+      }
+      .bn /deep/.el-input__inner{
+          height:30px;
+        }
+      
+      .btn{
+        position: absolute;
+        right: 10px;
+        .el-button{
+          padding:8px 15px;
+        }
+      }
+      .bt{
+        .el-button{
+          padding:8px 15px;
+        }
+      }
+      
     }
   }
   .administrator-t::before{
     content:"";
     position: absolute;
     width: 5px;
-    height: 80px;
+    height: 60px;
     background-color: red;
   }
 }

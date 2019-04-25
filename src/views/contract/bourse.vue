@@ -1,6 +1,24 @@
 <template>
     <div class="bourse">
-    <el-table
+      <div class="bourse-t">
+         <!-- 工具条 -->
+      <el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
+        <el-form :inline="true" @submit.native.prevent>
+          <el-form-item>
+            <el-input class="bn" v-model="tableData.name" placeholder="组别名称"></el-input>
+          </el-form-item>
+          <el-form-item class="bt">
+            <el-button type="primary" >搜索</el-button>
+          </el-form-item>
+
+          <el-form-item class="btn">
+            <el-button type="primary"><router-link to="./addgroup">添加合约分组</router-link> </el-button>
+          </el-form-item>
+        </el-form>
+      </el-col>
+      </div>
+      <div class="bourse-b">
+        <el-table
     :data="tableData.filter(data => !search || data.name.toLowerCase().includes(search.toLowerCase()))"
     style="width: 100%">
     <el-table-column
@@ -36,6 +54,8 @@
       </template>
     </el-table-column>
   </el-table>
+      </div>
+    
 </div>
 </template>
 <script>
@@ -64,6 +84,32 @@ export default {
     },
 }
 </script>
-<style>
-
+<style lang="scss" scoped="" type="text/css">
+.bourse{
+  width: 100%;
+  padding: 8px 15px;
+  background-color: #fff; 
+  .bourse-t{
+    height: 40px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    background-color: rgb(245, 239, 239);
+    .bt{
+      .el-button{
+        padding: 8px 15px;
+        border:0;
+      }
+    }
+    .btn{
+      float: right;
+      .el-button{
+        padding: 8px 15px;
+        border:0;
+      }
+    }
+     .bn /deep/.el-input__inner{
+          height:30px;
+        }
+  }
+}
 </style>

@@ -144,9 +144,9 @@ export default {};
       }
     }
     }
-   .btn{
-           display: inline;
-           margin-left: 151px;
-       }
+    .btn {
+      margin-left: 115px;
+      margin-top: 20px;
+    }
   }
 </style>

@@ -23,12 +23,12 @@
               <el-form-item label="赠送条件">
                 <el-input></el-input>元
               </el-form-item>
-              <el-form-item label="额度">:交易
-                
+              <el-form-item label="额度">
+                :交易
                 <el-input></el-input>元
               </el-form-item>
-              <el-form-item label="提现条件">:交易
-                
+              <el-form-item label="提现条件">
+                :交易
                 <el-input></el-input>元
               </el-form-item>
               <span class="sp">充值送赠金的额度,提现条件</span>
@@ -197,15 +197,17 @@
           <ul>
             <li>
               <h5 class="heads">网关支付</h5>
-              <div class="btn">
-                  <el-radio v-model="radio" label="1">升级中</el-radio>
+              <div class="bt">
+                <el-radio v-model="radio" label="1">升级中</el-radio>
               </div>
               <span>网关支付</span>
             </li>
             <li>
               <h5 class="heads">快捷支付</h5>
-              <div class="btn"><el-checkbox v-model="checked">升级中</el-checkbox></div>
-              
+              <div class="bt">
+                <el-checkbox v-model="checked">升级中</el-checkbox>
+              </div>
+
               <span>快捷支付</span>
             </li>
           </ul>
@@ -219,9 +221,9 @@
           <ul>
             <li>
               <h5 class="heads">注册机构码开关</h5>
-              <div class="btn">
-              <el-radio v-model="radio" label="1">开启</el-radio>
-              <el-radio v-model="radio" label="2">关闭</el-radio>
+              <div class="bt">
+                <el-radio v-model="radio" label="1">开启</el-radio>
+                <el-radio v-model="radio" label="2">关闭</el-radio>
               </div>
               <span>注册机构码开关，开启后要有机构码才能完成注册</span>
             </li>
@@ -286,7 +288,7 @@ export default {
           margin-right: -140px;
           text-align: right;
         }
-        .heads{
+        .heads {
           float: left;
           width: 140px;
           margin-bottom: -15px;
@@ -294,30 +296,34 @@ export default {
           text-align: right;
           margin-top: auto;
         }
-        .sp{
-            margin-left: 251px;
+        .sp {
+          margin-left: 251px;
         }
-        .el-form-item{
-            width: 600px;
-            margin-left: 150px;
-            margin-top: 10px;
-            margin-bottom: 0px;    
-           .el-input{
-               width:300px
-           } 
+        .el-form-item {
+          width: 600px;
+          margin-left: 150px;
+          margin-top: 10px;
+          margin-bottom: 0px;
+          .el-input {
+            width: 300px;
+          }
         }
-         span{
-             display: block;
-               font-size: 13px;
-               color:rgb(119, 113, 113);
-               margin-left: 151px;
-           }
+        span {
+          display: block;
+          font-size: 13px;
+          color: rgb(119, 113, 113);
+          margin-left: 151px;
         }
-       .btn{
-           display: inline;
-           margin-left: 151px;
-       }
+      }
+      .bt {
+        display: inline;
+        margin-left: 151px;
+      }
     }
   }
+   .btn {
+      margin-left: 115px;
+      margin-top: 20px;
+    }
 }
 </style>

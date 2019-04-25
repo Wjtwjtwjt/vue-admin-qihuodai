@@ -99,10 +99,14 @@ export default {
     }
     .protocol-t-r {
       float: right;
-      .el-button {
-        height: 36px;
+      .btn{
+        border:0;
+        .el-button {
+        padding: 8px 15px;
         border: 0;
       }
+      }
+      
     }
   }
 }

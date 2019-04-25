@@ -231,10 +231,13 @@
      }
      .deal-t-r{
        float: right;
-        .el-button{
-          height: 36px;
+       .btn{
+         .el-button{
+          padding: 8px 15px;
           border:0;
         }
+       }
+        
       //  margin-top:4px;
       //  width: 100px;
       //  height: 30px;

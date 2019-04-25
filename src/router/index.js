@@ -134,10 +134,31 @@ export const constantRouterMap = [
       meta: { title: '合约列表' },
     },
     {
+      path: 'addlist',
+      name: 'addlist',
+      component: () => import('@/views/contract/addlist'),
+      hidden:true,
+      meta: { title: '添加合约' },
+    },
+    {
       path: 'group',
       name: 'group',
       component: () => import('@/views/contract/group'),
       meta: { title: '合约分组列表' },
+    },
+    {
+      path: 'addgroup',
+      name: 'addgroup',
+      component: () => import('@/views/contract/addgroup'),
+      hidden:true,
+      meta: { title: '添加合约组别' },
+    },
+    {
+      path: 'editgroup',
+      name: 'editgroup',
+      component: () => import('@/views/contract/editgroup'),
+      hidden:true,
+      meta: { title: '修改合约组别' },
     },
     {
       path: 'bourse',
@@ -150,6 +171,13 @@ export const constantRouterMap = [
       name: 'currency',
       component: () => import('@/views/contract/currency'),
       meta: { title: '币种管理' },
+    },
+    {
+      path: 'editcurrency',
+      name: 'editcurrency',
+      component: () => import('@/views/contract/editcurrency'),
+      hidden:true,
+      meta: { title: '添加币种' },
     },
   ]
 },

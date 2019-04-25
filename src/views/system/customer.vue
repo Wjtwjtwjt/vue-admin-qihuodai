@@ -98,9 +98,10 @@ export default {};
         }
       }
     }
-    .btn{  
-           margin-left: 105px;
-    }
   }
+   .btn {
+      margin-left: 115px;
+      margin-top: 20px;
+    }
 }
 </style>
