@@ -7,7 +7,7 @@
 <div class="deal-t-r">
   <el-form>
     <el-form-item class="btn">
-            <el-button type="primary" @click="handleAdd">添加用户</el-button>
+      <el-button type="primary" @click="handleAdd">添加用户</el-button>
     </el-form-item>
   </el-form>
 </div>

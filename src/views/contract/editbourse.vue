@@ -21,9 +21,16 @@
                 </el-form-item>
               </li>
               <li>
-                <h5 class="heading">币种</h5>
-                <el-form-item>
-                  <el-input></el-input>
+                 <h5 class="heading">币种</h5>
+                 <el-form-item class="usergroup">
+                  <el-select placeholder="币种">
+                    <!-- v-model="tableData.id"  -->
+                    <el-option></el-option>
+                    <!-- v-for="item in tableData"
+                    :key="item.id"
+                    :label="item.label"
+                    :value="item.id"-->
+                  </el-select>
                 </el-form-item>
                 <span>币种</span>
               </li>

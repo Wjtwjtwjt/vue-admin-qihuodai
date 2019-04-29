@@ -7,7 +7,7 @@
       <div class="protocol-t-r">
         <el-form>
           <el-form-item class="btn">
-            <el-button type="primary" @click="handleAdd">添加用户</el-button>
+            <el-button type="primary"><router-link to="./addprotocol">新增协议</router-link></el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -19,7 +19,7 @@
         <el-table-column label="标题"  prop="title"></el-table-column>
         <el-table-column label="操作" width="200">
           <template slot-scope="scope">
-            <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+            <el-button size="mini"><router-link to="./editprotocol">编辑</router-link></el-button>
             <el-button size="mini" type="danger" @click="handleDel(scope.$index, scope.row)">删除</el-button>
           </template>
         </el-table-column>

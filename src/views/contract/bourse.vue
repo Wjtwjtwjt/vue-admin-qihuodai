@@ -5,14 +5,14 @@
       <el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
         <el-form :inline="true" @submit.native.prevent>
           <el-form-item>
-            <el-input class="bn" v-model="tableData.name" placeholder="组别名称"></el-input>
+            <el-input class="bn" v-model="tableData.name" placeholder="交易所名V称/交易所代码"></el-input>
           </el-form-item>
           <el-form-item class="bt">
             <el-button type="primary" >搜索</el-button>
           </el-form-item>
 
           <el-form-item class="btn">
-            <el-button type="primary"><router-link to="./addgroup">添加合约分组</router-link> </el-button>
+            <el-button type="primary"><router-link to="./addbourse">添加交易所</router-link> </el-button>
           </el-form-item>
         </el-form>
       </el-col>
@@ -46,7 +46,7 @@
       <template slot-scope="scope" width="200">
         <el-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+         ><router-link to="./editbourse">编辑</router-link> </el-button>
         <el-button
           size="mini"
           type="danger"
@@ -91,9 +91,11 @@ export default {
   background-color: #fff; 
   .bourse-t{
     height: 40px;
-    padding-left: 15px;
     box-sizing: border-box;
     background-color: rgb(245, 239, 239);
+    .toolbar{
+      padding-left: 15px;
+    }
     .bt{
       .el-button{
         padding: 8px 15px;
@@ -110,6 +112,13 @@ export default {
      .bn /deep/.el-input__inner{
           height:30px;
         }
+  }
+  .bourse-t::before{
+    content:'';
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    background-color: red;
   }
 }
 </style>

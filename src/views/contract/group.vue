@@ -74,9 +74,11 @@ export default {
   background-color: #fff; 
   .group-t{
     height: 40px;
-    padding-left: 15px;
     box-sizing: border-box;
     background-color: rgb(245, 239, 239);
+    .toolbar{
+      padding-left: 15px;
+    }
     .bt{
       .el-button{
         padding: 8px 15px;
@@ -93,6 +95,13 @@ export default {
      .bn /deep/.el-input__inner{
           height:30px;
         }
+  }
+  .group-t::before{
+    content:'';
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    background-color: red;
   }
 }
 </style>

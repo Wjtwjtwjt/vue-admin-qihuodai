@@ -8,11 +8,10 @@
       <el-table-column label="币种名称" prop="name"></el-table-column>
       <el-table-column label="对人民币汇率" prop="name"></el-table-column>
       <el-table-column label="更新时间" prop="name"></el-table-column>
-
       <el-table-column label="操作">
         <template slot-scope="scope" width="200">
           <el-button type="primary" size="mini">
-            <route-link to="./editcurrency">编辑</route-link>
+            <router-link to="./addcurrency">编辑</router-link>
           </el-button>
         </template>
       </el-table-column>

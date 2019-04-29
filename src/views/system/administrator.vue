@@ -267,8 +267,8 @@ export default {
     background-color: rgb(230, 223, 223);
     position: relative;
     .toolbar{
-      margin-left: 15px;
-      margin-top: 12px;
+      padding-left: 15px;
+      padding-top: 12px;
       .el-button--primary{
       border:0;
       }

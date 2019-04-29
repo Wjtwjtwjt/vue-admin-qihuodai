@@ -10,9 +10,8 @@
             <el-button type="primary" v-on:click="getUsers">查询</el-button>
           </el-form-item>
           <el-form-item>
-            <el-select  class="bn" v-model="tableData.id" placeholder="选择类型">
+            <el-select class="bn" v-model="tableData.id" placeholder="选择类型">
               <el-option
-             
                 v-for="item in tableData"
                 :key="item.id"
                 :label="item.label"
@@ -27,12 +26,7 @@
       </el-col>
     </div>
     <div class="operation-b">
-      <el-table
-        ref="singleTable"
-        :data="tableData"
-        highlight-current-row
-        style="width: 100%"
-      >
+      <el-table ref="singleTable" :data="tableData" highlight-current-row style="width: 100%">
         <el-table-column type="index" width="100" sortable></el-table-column>
         <el-table-column property="date" label="操作时间" width="200" sortable></el-table-column>
         <el-table-column property="name" label="IP" width="220" sortable></el-table-column>
@@ -106,14 +100,12 @@ export default {
       ]
     };
   },
-  methods:{
-    
-    getUsers:function(){
-      console.log(1111)
-      let para={
-        name:this.tableData.name
+  methods: {
+    getUsers: function() {
+      console.log(1111);
+      let para = {
+        name: this.tableData.name
       };
-
     }
   }
 };
@@ -126,19 +118,25 @@ export default {
   .operation-t {
     height: 40px;
     background-color: rgb(230, 223, 223);
-    .toolbar{
-      height: 26px;
+    .toolbar {
+      padding-left: 15px;
       .btn {
-        .el-button{
+        .el-button {
           border: 0;
           padding: 8px 15px;
         }
       }
-       .bn /deep/.el-input__inner{
-          height:30px;
-        }
-    }
+      .bn /deep/.el-input__inner {
+        height: 30px;
+      }
     }
   }
-
+  .operation-t::before{
+    content:'';
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    background-color: red;
+  }
+}
 </style>

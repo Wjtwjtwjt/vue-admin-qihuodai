@@ -24,7 +24,8 @@ import '@/permission' // permission control
  * If you remove `../mock` it will automatically request easy-mock data.
  */
 import '../mock' // simulation data
-
+import VueQuillEditor from 'vue-quill-editor'
+// require styles
 Vue.use(ElementUI, { locale })
 
 Vue.config.productionTip = false

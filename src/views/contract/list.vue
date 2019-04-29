@@ -8,9 +8,8 @@
             <el-input class="bn" v-model="tableData.name" placeholder="合约名称/合约代码"></el-input>
           </el-form-item>
           <el-form-item class="bt">
-            <el-button type="primary" >搜索</el-button>
+            <el-button type="primary">搜索</el-button>
           </el-form-item>
-
           <el-form-item class="btn">
             <el-button type="primary"><router-link to="./addlist">添加合约</router-link> </el-button>
           </el-form-item>
@@ -29,7 +28,7 @@
       <el-table-column label="所属交易所" prop="name"></el-table-column>
       <el-table-column label="操作" width="300">
         <template slot-scope="scope">
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+          <el-button size="mini"><router-link to="./editlist">编辑</router-link> </el-button>
           <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
           <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">采集k线图</el-button>
         </template>
@@ -82,9 +81,11 @@ export default {
   background-color: #fff; 
   .list-t{
     height: 40px;
-    padding-left: 15px;
     box-sizing: border-box;
     background-color: rgb(245, 239, 239);
+    .toolbar{
+       padding-left: 15px;
+    }
     .bt{
       .el-button{
         padding: 8px 15px;
@@ -101,6 +102,13 @@ export default {
      .bn /deep/.el-input__inner{
           height:30px;
         }
+  }
+  .list-t::before{
+    content:'';
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    background-color: red;
   }
 }
 </style>
